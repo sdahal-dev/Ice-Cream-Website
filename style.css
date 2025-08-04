@@ -306,31 +306,6 @@ body::-webkit-scrollbar {
   margin-bottom: 2vh;
 }
 
-.first-product {
-  transform: translateX(-50vw);
-  opacity: 0;
-  transition: transform 0.8s ease, opacity 0.8s ease;
-}
-.second-product {
-  transform: translateX(50vw);
-  opacity: 0;
-  transition: transform 0.8s ease, opacity 0.8s ease;
-}
-.third-product {
-  transform: translateX(-50vw);
-  opacity: 0;
-  transition: transform 0.8s ease, opacity 0.8s ease;
-}
-.our-img {
-  transform: translateX(50vw);
-  opacity: 0;
-  transition: transform 0.8s ease, opacity 0.8s ease;
-}
-
-.slide-in {
-  opacity: 1;
-  transform: translateX(0);
-}
 @media screen and (max-width: 891px) {
   .menu {
     visibility: visible;
@@ -341,6 +316,31 @@ body::-webkit-scrollbar {
   .contact {
     position: absolute;
     visibility: hidden;
+  }
+  .first-product {
+    transform: translateX(-50vw);
+    opacity: 0;
+    transition: transform 0.8s ease, opacity 0.8s ease;
+  }
+  .second-product {
+    transform: translateX(50vw);
+    opacity: 0;
+    transition: transform 0.8s ease, opacity 0.8s ease;
+  }
+  .third-product {
+    transform: translateX(-50vw);
+    opacity: 0;
+    transition: transform 0.8s ease, opacity 0.8s ease;
+  }
+  .our-img {
+    transform: translateX(50vw);
+    opacity: 0;
+    transition: transform 0.8s ease, opacity 0.8s ease;
+  }
+
+  .slide-in {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 
@@ -354,6 +354,32 @@ body::-webkit-scrollbar {
 
   .ice-cream-size {
     margin: 5vh 2vh;
+  }
+
+  .first-product {
+    transform: translateX(-20vw);
+    opacity: 0;
+    transition: transform 0.8s ease, opacity 0.8s ease;
+  }
+  .second-product {
+    transform: translateY(-20vh);
+    opacity: 0;
+    transition: transform 0.8s ease, opacity 0.8s ease;
+  }
+  .third-product {
+    transform: translateX(20vw);
+    opacity: 0;
+    transition: transform 0.8s ease, opacity 0.8s ease;
+  }
+  .our-img {
+    transform: translateX(50vw);
+    opacity: 0;
+    transition: transform 0.8s ease, opacity 0.8s ease;
+  }
+
+  .slide-in {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
   }
 }
 
@@ -375,6 +401,7 @@ body::-webkit-scrollbar {
   width: 85vw;
   border-radius: 2rem;
   margin-top: 1rem;
+  max-width: 500px;
 }
 
 .header {
