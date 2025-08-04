@@ -12,37 +12,36 @@ html,
 body {
   height: 100%;
   width: 100%;
-}
-
-body {
   scroll-behavior: smooth;
-  background: linear-gradient(to right, rgb(41, 41, 197), rgb(35, 156, 242));
-  background-position: center;
   overflow-x: hidden;
   overflow-y: auto;
+  background: linear-gradient(to right, rgb(41, 41, 197), rgb(35, 156, 242));
+  background-position: center;
+  overscroll-behavior-y: none;
 }
+
 .home {
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   overflow: hidden;
   border-bottom: 1px solid white;
 }
+
 .nav-container {
   display: flex;
   justify-content: space-between;
-  background: linear-gradient(
-      to right,
-      rgba(41, 41, 197, 0.737),
-      rgba(35, 156, 242, 0.789)
-    )
-    1%;
   align-items: center;
-  padding: 0 0.5rem;
+  background: linear-gradient(
+    to right,
+    rgba(41, 41, 197, 0.737),
+    rgba(35, 156, 242, 0.789)
+  );
   color: #fff;
+  padding: 1.5rem 0.5rem;
   height: 4vh;
   border-bottom: 1px solid;
-  padding: 1.5rem;
 }
+
 .brand-logo,
 .menu,
 .nav-links,
@@ -59,10 +58,10 @@ body {
   cursor: pointer;
   font-size: 1rem;
   align-items: center;
-  width: 10vw;
+  width: 10%;
 }
 
-.brand-logo > .logo-name {
+.logo-name {
   font-size: 1rem;
 }
 
@@ -77,25 +76,24 @@ body {
 
 .ri-menu-line:hover {
   color: #000;
-  transition: all 0.5s ease;
+  transition: 0.5s ease;
   transform: scale(1.2);
 }
 
 .menu-screen {
   position: absolute;
-  right: 0rem;
+  right: 0;
   display: flex;
   flex-direction: column;
   top: 3.1rem;
   background: linear-gradient(
-      to right,
-      rgba(41, 41, 197, 0.737),
-      rgba(35, 156, 242, 0.789)
-    )
-    1%;
+    to right,
+    rgba(41, 41, 197, 0.737),
+    rgba(35, 156, 242, 0.789)
+  );
   justify-content: center;
   align-items: center;
-  width: 50%;
+  width: 25%;
   padding-top: 2rem;
   border-bottom-left-radius: 1rem;
   z-index: 99;
@@ -104,6 +102,7 @@ body {
 .hidden {
   visibility: hidden;
 }
+
 .menu-screen > .pages {
   text-decoration: none;
   color: white;
@@ -111,31 +110,37 @@ body {
 }
 
 .menu-screen > * {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   font-weight: bold;
 }
+
 .menu-screen > .btn {
   padding: 0.5rem;
   border-radius: 1rem;
+  border: none;
+  background-color: black;
+  color: #fff;
 }
 
 .menu-screen > .pages:hover {
   border-bottom: 2px solid;
-  transition: all 0.5s ease;
+  transition: 0.5s ease;
   cursor: pointer;
-}
-
-.menu-screen > .btn {
-  border: none;
-  color: #fff;
-  background-color: black;
 }
 
 .menu-screen > .btn:hover {
-  color: rgb(36, 35, 35);
   background-color: rgba(255, 255, 255, 0.631);
-  transition: all 0.5s ease;
+  color: rgb(36, 35, 35);
+  transition: 0.5s ease;
   cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  margin: 0 10%;
 }
 
 .nav-links > .pages {
@@ -145,51 +150,38 @@ body {
   border-bottom: 2px solid transparent;
 }
 
-.nav-links {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.nav-links > .pages:hover {
+  border-bottom: 2px solid white;
+  transition: 0.5s ease;
 }
 
-.nav-links {
-  width: 60vw;
-  margin: 0 10vw;
-}
 .btn-contact {
   padding: 0.5rem;
   border: none;
   color: #fff;
   background-color: black;
   border-radius: 2rem;
-  width: 10vw;
+  width: 10%;
 }
 
 .nav-links > .btn:hover {
-  color: rgb(36, 35, 35);
   background-color: rgba(255, 255, 255, 0.631);
-  transition: all 0.5s ease;
+  color: rgb(36, 35, 35);
+  transition: 0.5s ease;
   cursor: pointer;
-}
-
-.nav-links > .pages:hover {
-  border-bottom: 2px solid white;
-  transition: all 0.5s ease;
 }
 
 .home-page-content {
   display: grid;
-  grid-template-columns: repeat(5, 20vw);
+  grid-template-columns: repeat(5, 20%);
   grid-template-rows: repeat(5, 18.8vh);
 }
 
 .ice-cream-bucket {
   grid-row: 3 / 7;
-  grid-column: 2 /5;
+  grid-column: 2 / 5;
   justify-self: center;
   align-self: center;
-}
-
-.ice-cream-bucket {
   height: 27rem;
   animation: bucketSpin 1s linear;
 }
@@ -200,7 +192,7 @@ body {
 
 .pac1 {
   grid-row: 1 / 3;
-  grid-column: 1 /3;
+  grid-column: 1 / 3;
   justify-self: center;
   align-self: center;
   transform: translateY(50px) rotate(-35deg);
@@ -209,7 +201,7 @@ body {
 
 .pac2 {
   grid-row: 2 / 4;
-  grid-column: 4 /6;
+  grid-column: 4 / 6;
   justify-self: center;
   align-self: center;
   transform: translateY(-50px) rotate(35deg);
@@ -221,9 +213,8 @@ body {
     transform: translateY(80px);
     opacity: 0;
   }
-
   to {
-    transition: translateY(0);
+    transform: translateY(0);
     opacity: 1;
   }
 }
@@ -233,18 +224,17 @@ body {
     transform: translateX(-210px);
     opacity: 0;
   }
-
   to {
     transform: translateX(0) translateY(50px) rotate(-35deg);
     opacity: 1;
   }
 }
+
 @keyframes pac2Spin {
   from {
     transform: translateX(210px);
     opacity: 0;
   }
-
   to {
     transform: translateX(0) translateY(-50px) rotate(35deg);
     opacity: 1;
@@ -264,10 +254,9 @@ body {
   }
 }
 
-/* Products Page */
 .products {
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -275,19 +264,11 @@ body {
   border-bottom: 1px solid #fff;
 }
 
-.ice-cream-size .product-img {
-  height: 20vh;
-}
-
-.ice-cream-size h3 {
-  text-align: center;
-  font-size: 1rem;
-}
-
 .ice-cream-size {
   border: 1px solid white;
   border-radius: 2rem;
-  width: 80vw;
+  width: 18rem;
+  height: 30vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -299,25 +280,46 @@ body {
   );
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(0.8rem);
-  height: 30vh;
   color: #ffffffcc;
+  transition: transform 0.3s ease;
 }
 
 .ice-cream-size:hover {
   border-color: #ffffff89;
   transform: scale(0.95);
-  transition: all 0.3s ease;
 }
+
+.ice-cream-size .product-img {
+  height: 20vh;
+  object-fit: contain;
+}
+
+.ice-cream-size h3 {
+  text-align: center;
+  font-size: 1rem;
+}
+
 .first-product,
 .second-product {
   margin-bottom: 2vh;
 }
-.ice-cream-size:hover {
+
+@media screen and (min-width: 892px) {
+  .products {
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .ice-cream-size {
+    margin: 5vh 2vh;
+  }
 }
 
 .about {
   height: 100vh;
-  width: 100vw;
+  width: 100%;
 }
 
 .about-container {
@@ -327,6 +329,7 @@ body {
   justify-content: center;
   margin: 2vh 5vw;
 }
+
 .our-img {
   height: 35vh;
   border-radius: 2rem;
@@ -347,6 +350,7 @@ body {
   font-weight: 300;
   border-bottom: 2px solid;
 }
+
 .story-of-us {
   background: linear-gradient(
     to bottom right,
@@ -359,8 +363,8 @@ body {
   border-radius: 2rem;
   margin: 2vh 0;
 }
+
 .story-of-us p {
   color: #fff;
   text-align: left;
-  font-weight: 500;
 }
