@@ -161,10 +161,10 @@ body {
   color: #fff;
   background-color: black;
   border-radius: 2rem;
-  width: 10%;
+  width: 6rem;
 }
 
-.nav-links > .btn:hover {
+.btn-contact:hover {
   background-color: rgba(255, 255, 255, 0.631);
   color: rgb(36, 35, 35);
   transition: 0.5s ease;
@@ -362,6 +362,7 @@ body {
   padding: 2rem;
   border-radius: 2rem;
   margin: 2vh 0;
+  max-width: 80vw;
 }
 
 .story-of-us p {
